@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/desktop.css' %}" type="text/css">
+<link rel="stylesheet"  href="{% static 'css/mobile.css' %}" type="text/css">
+</head>
+<style>
+
+
+</style>
+
+<body>
+<div class="chatbody">
+<h1 class="title">dummy</h1>
+<form method="POST" action="">
+	{% csrf_token %}
+
+
+<input type="text" class="entered_text"></input>
+<button class="send_converstion">send</button>
+</div>
+</body>
+</html>
