@@ -16,12 +16,13 @@
       <center><h3 class="title text-warning">Dummy</h3></center>
       <form method="POST" action="">
         {% csrf_token %}
-          <div class="row justify-content-end" >
-            user: <div class=" card bg-warning " style="width:auto ; height: auto;"> {{ user}}</br></div>
+          
+          <div class="row justify-content-end">
+            user :<div class=" card bg-warning p-1" >{{ user}}<br></div>
           </div>
 
           <div class="row justify-content-start">
-            dummy:<div class=" card bg-warning " style="width:auto ; height: auto;">{{ bot}}<br></div>
+            dummy :<div class=" card bg-warning  p-1" style="width:auto ; height: auto;">{{ bot}}<br></div>
           </div>
         
         <div class="row justify-content-around d-flex align-items-end" style="height: 36rem;">
