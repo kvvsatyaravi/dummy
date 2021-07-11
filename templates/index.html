@@ -1,29 +1,37 @@
 <html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}" type="text/css">
 
-
-{% load static %}
-<link rel="stylesheet"  href="{% static 'css/desktop.css' %}" type="text/css">
-<link rel="stylesheet"  href="{% static 'css/mobile.css' %}" type="text/css">
+<title>dummy chatbot</title>
 </head>
-<style>
-
-
-</style>
 
 <body>
-<div class="chatbody">
-<h1 class="title">kittu bot</h1>
-<form method="POST" action="">
-	{% csrf_token %}
+<br class="row">
+<div class="container">
+<div class="row">
+  <div class="card col border-warning mb-3" style="height: 40rem;">
+    <div class="card-body ">
+      <center><h3 class="title text-warning">Dummy</h3></center>
+      <form method="POST" action="">
+        {% csrf_token %}
+          <div class="row justify-content-end" >
+            user: <div class=" card bg-warning " style="width:auto ; height: auto;"> {{ user}}</br></div>
+          </div>
 
-
-<div class="userchat">User:{{user}}</br></div>
-<div class="chat_box2">Kittu:{{bot}}</div>
-
-<input type="text" name="input" class="entered_text"></input>
-<button class="send_converstion">send</button>
+          <div class="row justify-content-start">
+            dummy:<div class=" card bg-warning " style="width:auto ; height: auto;">{{ bot}}<br></div>
+          </div>
+        
+        <div class="row justify-content-around d-flex align-items-end" style="height: 36rem;">
+          <input type="text" name="input" name="input" class="col-8  form-control border-warning"></input>
+          <button class="btn btn-warning col-3">Send</button>
+        </div>
+    
+      </div>
+  </div>
+</div>
 </div>
 </body>
 </html>
