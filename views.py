@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from backend.chat import  bot_name,chat
+from backend.chat import  chat
 
 
 class mainpage(TemplateView):
@@ -11,6 +11,7 @@ class mainpage(TemplateView):
 
 	def post(self,request):
 		if request.method == 'POST':
-			context={"bot":chat()}
+			
+			context={"bot":chat(request)}
 			
 		return render(request,self.Template_view,context)

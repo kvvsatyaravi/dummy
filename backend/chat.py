@@ -27,10 +27,11 @@ model.eval()
 
 bot_name = "Sam"
 print("Let's chat! (type 'quit' to exit)")
-def chat():
+
+def chat(request):
     while True:
         # sentence = "do you use credit cards?"
-        sentence = input("You: ")
+        sentence = request.POST.get('input',False)
         if sentence == "quit":
             break
 
