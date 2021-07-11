@@ -1,6 +1,6 @@
 
 Django
-
+gunicorn
 numpy
 torch
 nltk
