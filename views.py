@@ -11,7 +11,7 @@ class mainpage(TemplateView):
 
 	def post(self,request):
 		if request.method == 'POST':
-			
-			context={"bot":chat(request)}
+			user = request.POST.get('input',False)
+			context={"user":user,"bot":chat(request)}
 			
 		return render(request,self.Template_view,context)

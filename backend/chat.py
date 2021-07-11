@@ -50,9 +50,9 @@ def chat(request):
         if prob.item() > 0.75:
             for intent in intents['intents']:
                 if tag == intent["tag"]:
-                    botvalue = f"{bot_name}: {random.choice(intent['responses'])}"
+                    botvalue = f"{random.choice(intent['responses'])}"
         else:
-            botvalue = f"{bot_name}: I do not understand..."
+            botvalue = f"I do not understand..."
 
         return botvalue
     
