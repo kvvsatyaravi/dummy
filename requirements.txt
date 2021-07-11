@@ -4,3 +4,4 @@ gunicorn
 numpy
 torch
 nltk
+django-heroku
